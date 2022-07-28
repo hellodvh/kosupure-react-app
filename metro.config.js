@@ -1,5 +1,12 @@
 const { getDefaultConfig } = require("metro-config");
 
+const defaultConfig = getDefaultConfig(__dirname);
+
+defaultConfig.resolver.assetExts.push("cjs");
+
+module.exports = defaultConfig;
+
+//React Native Sass Transformer
 module.exports = (async () => {
   const {
     resolver: { sourceExts }
