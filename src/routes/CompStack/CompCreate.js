@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import { auth, db } from "../../../firebase";
+import { auth, db } from "../../config/firebase.config";
 // import { newCompetition } from "../../services/Database";
 
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";

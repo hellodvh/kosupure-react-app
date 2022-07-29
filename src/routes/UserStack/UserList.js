@@ -43,7 +43,7 @@ export default function UserList({ navigation }) {
           >
             <View style={styles.card}>
               <Image
-                source={require("../../../assets/user.png")}
+                source={require("../../assets/images/user.png")}
                 style={styles.cardImage}
               />
               <View style={styles.cardContent}>

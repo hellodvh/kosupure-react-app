@@ -48,11 +48,11 @@ export default function DrawerNavigator() {
         options={{ drawerIcon: () => <IconContainer name="event-available" /> }}
       /> */}
       {/* Cosplayer Screen */}
-      {/* <Drawer.Screen
+      <Drawer.Screen
         name="Cosplayers"
         component={UserStack}
         options={{ drawerIcon: () => <IconContainer name="person" /> }}
-      /> */}
+      />
     </Drawer.Navigator>
   );
 }
