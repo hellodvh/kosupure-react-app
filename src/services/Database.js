@@ -9,7 +9,6 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 
-
 //Create a New User Function.
 export const createUserOnRegister = (user, username) => {
   const userRef = doc(db, "users", user.uid);
@@ -34,3 +33,56 @@ export const getAllUsers = async () => {
   });
   return users;
 };
+
+//Create a new competition item in the firestore db.
+export const newCompetition = (competition) => {
+  return addDoc(collection(db, "competitions"), competition);
+};
+
+// Return the collection of competitions from the firestore db.
+export const getCompetitionCollectionListener = () => {
+  return collection(db, "competitions");
+};
+
+// Add a new Entry to the Competition collection.
+export const addEntryToCompetition = async (data, id) => {
+  const collectionRef = collection(db, "competitions/" + id + "/entries");
+  // const collectionSnapshot = await addDoc(collectionRef, data);
+  return addDoc(collectionRef, data);
+};
+
+// Return the collection of entries.
+export const getEntryOfCompetition = async (id) => {
+  let entries = [];
+
+  const collectionRef = collection(db, "competitions/" + id + "/entries");
+  const collectionSnapshot = await getDocs(collectionRef);
+
+  collectionSnapshot.forEach((doc) => {
+    entries.push(doc.data());
+  });
+  return entries;
+};
+
+// VOTING FUNCTIONS
+//
+// Add New Vote Count to Entry
+// export const addVoteCountToEntry = (data, id) => {
+  
+//   const collectionRef = collection(db, "entries/" + id + "/votes");
+
+//   const voteCount = {
+//     uid: auth.currentUser.uid(),
+//     voteCount: auth.currentUser.voteCount(),
+//   }
+
+//   return addDoc(collectionRef, data)
+// }
+
+// // Get Entries collection from firestore db
+// // Return the collection of competition from the firestore db.
+// export const getEntriesCollectionListener = () => {
+//   return collection(db, "entries");
+// };
+
+// Get Vote Count from Entry
