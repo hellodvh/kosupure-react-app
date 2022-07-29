@@ -12,7 +12,7 @@ import {
 } from "react-native";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../firebase";
+import { auth } from "../../config/firebase.config";
 import { createUserOnRegister } from "../../services/Database";
 
 export default function RegisterScreen({ navigation }) {
@@ -45,7 +45,7 @@ export default function RegisterScreen({ navigation }) {
       <View style={styles.headerContainer}>
         {/* Header Imge */}
         <Image
-          source={require("../../../assets/images/registerHeader.png")}
+          source={require("../../assets/images/registerHeader.png")}
           style={styles.headerImage}
         />
         {/* Header Text */}

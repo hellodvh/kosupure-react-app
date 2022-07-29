@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   Button,
 } from "react-native";
-import Appstyles from "./LoginScreen.scss";
+// import Appstyles from "./LoginScreen.scss";
 
 import { auth } from "../../config/firebase.config";
 
@@ -40,7 +40,7 @@ export default function LoginScreen({ navigation }) {
       <View style={styles.headerContainer}>
         {/* Header Imge */}
         <Image
-          source={require("../../../assets/images/registerHeader.png")}
+          source={require("../../assets/images/registerHeader.png")}
           style={styles.headerImage}
         />
         {/* Header Text */}

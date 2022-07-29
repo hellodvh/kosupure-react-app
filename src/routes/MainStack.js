@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { createNativeStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import AuthStack from "./AuthStack/AuthStack";
 import DrawerNavigator from "../components/DrawerNavigator";
