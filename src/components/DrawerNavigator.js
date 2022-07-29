@@ -4,8 +4,8 @@ import { StyleSheet } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import Home from "../screens/HomeScreen/HomeScreen";
-// import CompStack from "../routes/CompStack/CompStack";
-// import UserStack from "../routes/UserStack/UserStack";
+import CompStack from "../routes/CompStack/CompStack";
+import UserStack from "../routes/UserStack/UserStack";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import CustomDrawer from "./CustomDrawer/CustomDrawer";
