@@ -42,11 +42,11 @@ export default function DrawerNavigator() {
         options={{ drawerIcon: () => <IconContainer name="home" /> }}
       />
       {/* Competition Screen */}
-      {/* <Drawer.Screen
+      <Drawer.Screen
         name="Competitions"
         component={CompStack}
         options={{ drawerIcon: () => <IconContainer name="event-available" /> }}
-      /> */}
+      />
       {/* Cosplayer Screen */}
       <Drawer.Screen
         name="Cosplayers"

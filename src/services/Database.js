@@ -44,13 +44,6 @@ export const getCompetitionCollectionListener = () => {
   return collection(db, "competitions");
 };
 
-// Add a new Entry to the Competition collection.
-export const addEntryToCompetition = async (data, id) => {
-  const collectionRef = collection(db, "competitions/" + id + "/entries");
-  // const collectionSnapshot = await addDoc(collectionRef, data);
-  return addDoc(collectionRef, data);
-};
-
 // Return the collection of entries.
 export const getEntryOfCompetition = async (id) => {
   let entries = [];
@@ -62,6 +55,13 @@ export const getEntryOfCompetition = async (id) => {
     entries.push(doc.data());
   });
   return entries;
+};
+
+// Add a new Entry to the Competition collection.
+export const addEntryToCompetition = async (data, id) => {
+  const collectionRef = collection(db, "competitions/" + id + "/entries");
+  // const collectionSnapshot = await addDoc(collectionRef, data);
+  return addDoc(collectionRef, data);
 };
 
 // VOTING FUNCTIONS
