@@ -67,7 +67,7 @@ const CustomDrawer = (props, { navigation }) => {
           textAlign: "center",
           bottom: 50,
           width: "80%",
-          backgroundColor: "#006ee6",
+          backgroundColor: "#F2A385",
           padding: 10,
           borderRadius: 5,
         }}

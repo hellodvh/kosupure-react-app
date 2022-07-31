@@ -85,7 +85,7 @@ const CompList = ({ navigation }) => {
           ))}
         </View>
         {/* Competiton Entires Container End */}
-        <Text style={styles.headingText}>Previous Competitions</Text>
+        {/* <Text style={styles.headingText}>Previous Competitions</Text> */}
       </ScrollView>
       <FAB
         icon="plus"
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     margin: 16,
     right: 20,
     bottom: 150,
-    backgroundColor: "#006ee6",
+    backgroundColor: "#F25781",
   },
   container: {
     backgroundColor: "#F0F2F5",
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     color: "rgba(0, 0, 0, 0.38)",
   },
   saveButton: {
-    backgroundColor: "#006ee6",
+    backgroundColor: "#66D8F2",
     justifyContent: "center",
     alignSelf: "center",
     width: "80%",

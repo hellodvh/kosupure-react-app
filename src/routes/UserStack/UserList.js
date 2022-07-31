@@ -32,7 +32,7 @@ export default function UserList({ navigation }) {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.heading}>All Cosplayers</Text>
       <ActivityIndicator animating={isLoading} />
       <ScrollView style={{ marginBottom: 100 }}>
@@ -61,6 +61,7 @@ export default function UserList({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#0C0C1C",
   },
   card: {
     flexDirection: "row",
@@ -77,8 +78,8 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   cardImage: {
-    height: 100,
-    width: 100,
+    height: 85,
+    width: 85,
     borderRadius: 6,
     left: 0,
   },

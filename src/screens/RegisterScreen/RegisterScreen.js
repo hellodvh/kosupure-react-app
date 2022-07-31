@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Button,
+  Pressable,
 } from "react-native";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -45,7 +46,7 @@ export default function RegisterScreen({ navigation }) {
       <View style={styles.headerContainer}>
         {/* Header Imge */}
         <Image
-          source={require("../../assets/images/registerHeader.png")}
+          source={require("../../assets/images/KosupureImage.png")}
           style={styles.headerImage}
         />
         {/* Header Text */}
@@ -100,86 +101,113 @@ export default function RegisterScreen({ navigation }) {
       </View>
       <ActivityIndicator animating={loading} size="large" color="#006ee6" />
 
-      <Button
+      {/* <Button
         title="Go to Login Screen"
         onPress={() => navigation.navigate("Login")}
-      />
+      /> */}
+      <Pressable
+        style={styles.button}
+        onPress={() => navigation.navigate("Login")}
+      >
+        <Text style={styles.text}>Go to Login</Text>
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
-      width: "100%",
-      height: "100%",
-      backgroundColor: "#0C0C1C",
-    },
-    headerContainer: {},
-    headerText: {
-      color: "white",
-      fontWeight: "bold",
-      fontSize: 28,
-    },
-    headerImage: {},
-    formContainer: {
-      width: "80%",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    headerText: {
-      fontSize: 32,
-      fontStyle: "normal",
-      fontWeight: "bold",
-      textAlign: "center",
-      color: "white",
-      paddingTop: 35,
-      paddingBottom: 35,
-    },
-    usernameInput: {
-      width: "100%",
-      height: 60,
-      backgroundColor: "#f2f2f2f2",
-      borderRadius: 12,
-      marginBottom: 35,
-      padding: 10,
-      fontSize: 18,
-    },
-    emailInput: {
-      width: "100%",
-      height: 60,
-      backgroundColor: "#f2f2f2f2",
-      borderRadius: 12,
-      marginBottom: 35,
-      padding: 10,
-      fontSize: 18,
-    },
-    passwordInput: {
-      width: "100%",
-      height: 60,
-      backgroundColor: "#f2f2f2f2",
-      borderRadius: 12,
-      marginBottom: 35,
-      padding: 10,
-      fontSize: 18,
-    },
-    registerButton: {
-      backgroundColor: "#f2f2f2f2",
-      width: "80%",
-      height: 60,
-      borderColor: "grey",
-      borderWidth: 2,
-      borderRadius: 12,
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: 35,
-    },
-    registerButtonText: {
-      fontSize: 18,
-      color: "#000",
-      fontWeight: "bold",
-    },
-  });
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#5B83D7",
+  },
+
+  headerContainer: {},
+  headerImage: {},
+
+  formContainer: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  headerText: {
+    fontSize: 20,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+    textAlign: "center",
+    color: "#66D8F2",
+    paddingTop: 35,
+    paddingBottom: 35,
+  },
+  usernameInput: {
+    width: 320,
+    height: 50,
+    backgroundColor: "#f2f2f2f2",
+    borderRadius: 10,
+    marginBottom: 35,
+    padding: 10,
+    fontSize: 16,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+    elevation: 3,
+  },
+  emailInput: {
+    width: 320,
+    height: 50,
+    backgroundColor: "#f2f2f2f2",
+    borderRadius: 10,
+    marginBottom: 35,
+    padding: 10,
+    fontSize: 16,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+    elevation: 3,
+  },
+  passwordInput: {
+    width: 320,
+    height: 50,
+    backgroundColor: "#f2f2f2f2",
+    borderRadius: 10,
+    marginBottom: 35,
+    padding: 10,
+    fontSize: 16,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+    elevation: 3,
+  },
+  registerButton: {
+    backgroundColor: "#F1E088",
+    width: 260,
+    height: 50,
+    borderColor: "#FFFFFF",
+    borderWidth: 2,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 35,
+    elevation: 3,
+  },
+  registerButtonText: {
+    fontSize: 20,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+  },
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 0,
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: "bold",
+    letterSpacing: 0.25,
+    color: "white",
+  },
+});
