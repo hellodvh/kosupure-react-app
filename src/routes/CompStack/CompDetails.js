@@ -70,10 +70,7 @@ export default function CompDetails({ route, navigation }) {
         {/* New Competition Form End */}
         {/* Buttons Container */}
         <View>
-          <TouchableOpacity
-            style={styles.enterButton}
-            onPress={() => navigation.navigate("CompEntry", params.id)}
-          >
+          <TouchableOpacity style={styles.enterButton} onPress={() => navigation.navigate("CompEntry", params.id)}>
             <Text style={styles.enterButtonText}>Enter Comp!</Text>
           </TouchableOpacity>
         </View>
@@ -186,23 +183,33 @@ const styles = StyleSheet.create({
     color: "rgba(0, 0, 0, 0.38)",
   },
   enterButton: {
-    backgroundColor: "#006ee6",
-    justifyContent: "center",
-    alignSelf: "center",
-    width: "80%",
-    height: 60,
-    borderColor: "lightgrey",
+    // backgroundColor: "#006ee6",
+    // justifyContent: "center",
+    // alignSelf: "center",
+    // width: "80%",
+    // height: 60,
+    // borderColor: "lightgrey",
+    // borderWidth: 2,
+    // borderRadius: 12,
+    // alignItems: "center",
+    // justifyContent: "center",
+    // marginTop: 35,
+    // marginBottom: 100,
+    backgroundColor: "#F1E088",
+    width: 260,
+    height: 50,
+    borderColor: "#FFFFFF",
     borderWidth: 2,
-    borderRadius: 12,
+    borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 35,
-    marginBottom: 100,
+    elevation: 3,
   },
   enterButtonText: {
-    fontSize: 16,
-    color: "#fff",
-    fontWeight: "bold",
+    fontSize: 20,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
   },
 
   //Entries

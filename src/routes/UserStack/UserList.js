@@ -33,7 +33,7 @@ export default function UserList({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.heading}>All Cosplayers</Text>
+      <Text style={styles.headingText}>All Cosplayers</Text>
       <ActivityIndicator animating={isLoading} />
       <ScrollView style={{ marginBottom: 100 }}>
         {users.map((user, index) => (
@@ -61,13 +61,21 @@ export default function UserList({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0C0C1C",
+    backgroundColor: "#5B83D7",
+    flexDirection: "column",
+  },
+  headingText: {
+    fontSize: 26,
+    fontWeight: "bold",
+    color: "rgba(0, 0, 0, 0.38)",
+    marginVertical: 10,
+    marginHorizontal: 10,
+    textAlign: "center",
   },
   card: {
     flexDirection: "row",
-    backgroundColor: "#f1f2f3",
+    backgroundColor: "#F2F2F2",
     borderRadius: 12,
-    elevation: 3,
     marginHorizontal: 20,
     marginVertical: 5,
     borderWidth: 1,
@@ -78,10 +86,12 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   cardImage: {
-    height: 85,
-    width: 85,
+    height: 60,
+    width: 60,
     borderRadius: 6,
     left: 0,
+    marginVertical: 10,
+    marginHorizontal: 10,
   },
   cardContent: {
     marginHorizontal: 10,
@@ -91,6 +101,6 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
     marginStart: 20,
-    color: "darkblue",
+    color: "#F2F2F2",
   },
 });

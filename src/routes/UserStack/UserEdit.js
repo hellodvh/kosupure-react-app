@@ -21,19 +21,19 @@ export default function UserEdit({ route, navigation }) {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Image
-          source={require("../../assets/images/user.png")}
-          style={styles.cardImage}
-        />
+        source={require("../../assets/images/user.png")}
+        style={styles.cardImage}
+      />
       <TextInput
-        style={styles.input}
+        style={styles.formInput}
         onChangeText={setUsername}
         value={username}
       ></TextInput>
 
       <TextInput
-        style={styles.input}
+        style={styles.formInput}
         onChangeText={setRole}
         value={role}
       ></TextInput>
@@ -47,9 +47,12 @@ export default function UserEdit({ route, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#F0F2F5",
     flex: 1,
-    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#5B83D7",
   },
   scrollView: {
     marginHorizontal: 20,
@@ -70,18 +73,7 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     color: "rgba(0, 0, 0, 0.38)",
   },
-  formInputPicker: {
-    width: "100%",
-    height: 60,
-    backgroundColor: "#f2f2f2f2",
-    borderColor: "lightgrey",
-    borderWidth: 2,
-    borderRadius: 12,
-    marginBottom: 35,
-    justifyContent: "center",
-    padding: 10,
-    fontSize: 18,
-  },
+
   formInput: {
     width: "100%",
     height: 60,
@@ -93,43 +85,29 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
   },
-
   saveButton: {
-    backgroundColor: "#006ee6",
-    justifyContent: "center",
-    alignSelf: "center",
-    width: "80%",
-    height: 60,
-    borderColor: "lightgrey",
+    backgroundColor: "#F1E088",
+    width: 260,
+    height: 50,
+    borderColor: "#FFFFFF",
     borderWidth: 2,
-    borderRadius: 12,
+    borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 35,
-    marginBottom: 100,
+    elevation: 3
   },
   saveButtonText: {
-    fontSize: 16,
-    color: "#fff",
-    fontWeight: "bold",
+    fontSize: 20,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
   },
-  // saveButton: {
-  //   borderStyle: "dotted",
-  //   borderWidth: 1,
-  //   borderColor: "gray",
-  //   position: "absolute",
-  //   right: 0,
-  //   alignSelf: "center",
-  //   textAlign: "center",
-  //   width: "20%",
-  //   backgroundColor: "transparent",
-  //   padding: 10,
-  //   borderRadius: 5,
-  // },
   cardImage: {
     height: 100,
     width: 100,
     borderRadius: 6,
     left: 0,
+    marginVertical: 10,
+    marginHorizontal: 10,
   },
 });

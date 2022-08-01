@@ -43,7 +43,7 @@ const CompList = ({ navigation }) => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
         {/* Competition Container*/}
-        <Text style={styles.headingText}>Available Competitions</Text>
+        <Text style={styles.headingText}>All Competitions</Text>
         {/* Container */}
         <View
           style={{
@@ -53,8 +53,9 @@ const CompList = ({ navigation }) => {
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "flex-start",
+            backgroundColor: "#e3e3e3",
+            borderColor: "#b2b2b2",
             borderWidth: 1,
-            borderColor: "lightgrey",
             borderRadius: 6,
           }}
         >
@@ -88,6 +89,8 @@ const CompList = ({ navigation }) => {
         {/* <Text style={styles.headingText}>Previous Competitions</Text> */}
       </ScrollView>
       <FAB
+        animated={true}
+        label="Competition"
         icon="plus"
         style={styles.fab}
         onPress={() => navigation.navigate("CreateComp")}
@@ -101,26 +104,39 @@ export default CompList;
 const styles = StyleSheet.create({
   fab: {
     position: "absolute",
-    margin: 16,
-    right: 20,
-    bottom: 150,
-    backgroundColor: "#F25781",
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    bottom: 50,
+    backgroundColor: "#66D8F2",
+    width: 260,
+    height: 50,
+    borderColor: "#FFFFFF",
+    borderWidth: 2,
+    borderRadius: 10,
+    marginTop: 35,
+    elevation: 3,
   },
   container: {
-    backgroundColor: "#F0F2F5",
+    backgroundColor: "#5B83D7",
     flex: 1,
     flexDirection: "column",
   },
   scrollView: {
-    marginHorizontal: 20,
+    // marginHorizontal: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   },
   headingText: {
     fontSize: 26,
     fontWeight: "bold",
     color: "rgba(0, 0, 0, 0.38)",
+    marginVertical: 10,
+    marginHorizontal: 10,
+    textAlign: "center",
   },
   bannerContainer: {
-    borderColor: "lightgrey",
+    borderColor: "#5B83D7",
     borderWidth: 1,
     borderRadius: 6,
     height: 200,
@@ -148,23 +164,22 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     color: "rgba(0, 0, 0, 0.38)",
   },
-  saveButton: {
-    backgroundColor: "#66D8F2",
-    justifyContent: "center",
-    alignSelf: "center",
-    width: "80%",
-    height: 60,
-    borderColor: "lightgrey",
-    borderWidth: 2,
-    borderRadius: 12,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 35,
-    marginBottom: 100,
-  },
-  saveButtonText: {
-    fontSize: 16,
-    color: "#fff",
-    fontWeight: "bold",
-  },
+  // saveButton: {
+  //   backgroundColor: "#66D8F2",
+  //   justifyContent: "center",
+  //   width: "80%",
+  //   height: 60,
+  //   borderColor: "lightgrey",
+  //   borderWidth: 2,
+  //   borderRadius: 12,
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   marginTop: 35,
+  //   marginBottom: 100,
+  // },
+  // saveButtonText: {
+  //   fontSize: 16,
+  //   color: "#fff",
+  //   fontWeight: "bold",
+  // },
 });

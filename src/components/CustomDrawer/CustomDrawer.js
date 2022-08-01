@@ -40,45 +40,51 @@ const CustomDrawer = (props, { navigation }) => {
             justifyContent: "space-between",
             padding: 20,
             alignItems: "center",
-            backgroundColor: "#006ee6",
+            backgroundColor: "#5B83D7",
             marginBottom: 20,
           }}
         >
           <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
             <Image
-              source={{
-                uri: "https://images.unsplash.com/photo-1581661701347-6e695689365b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29zcGxheXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=300&q=60",
-              }}
-              style={{ width: 60, height: 60, borderRadius: 6 }}
+              source={require("../../assets/images/user.png")}
+              style={{ width: 60, height: 60, borderRadius: 30 }}
             />
           </TouchableOpacity>
-          <View>
+          <View style={{ flexDirection: "column" }}>
             <Text>{username}</Text>
             <Text>{email}</Text>
-            <Text>Cosplayer</Text>
           </View>
         </View>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
-      <TouchableOpacity
-        style={{
-          position: "absolute",
-          alignSelf: "center",
-          textAlign: "center",
-          bottom: 50,
-          width: "80%",
-          backgroundColor: "#F2A385",
-          padding: 10,
-          borderRadius: 5,
-        }}
-      >
-        <Text style={{ alignSelf: "center" }} onPress={onSignOutPress}>
-          Logout
-        </Text>
+      <TouchableOpacity style={styles.logoutButton} onPress={onSignOutPress}>
+        <Text style={styles.logoutButtonText}>Logout</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
 };
 
 export default CustomDrawer;
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  logoutButton:{
+    backgroundColor: "#F2A385",
+    width: 200,
+    height: 50,
+    bottom: 50,
+    borderColor: "#FFFFFF",
+    borderWidth: 2,
+    borderRadius: 10,
+    alignItems: "center",
+    alignSelf: "center",
+    justifyContent: "center",
+    marginTop: 35,
+    elevation: 3,
+    marginVertical:10,
+    marginHorizontal: 10,
+  },
+  logoutButtonText: {
+    fontSize: 16,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+  },
+});
