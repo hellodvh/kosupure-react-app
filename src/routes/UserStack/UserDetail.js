@@ -7,6 +7,7 @@ import {
   View,
   Image,
 } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { auth } from "../../config/firebase.config";
 
 export default function UserDetail({ route, navigation }) {
@@ -14,6 +15,7 @@ export default function UserDetail({ route, navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
       <View style={styles.card}>
         <Image
           source={require("../../assets/images/user.png")}
@@ -30,35 +32,36 @@ export default function UserDetail({ route, navigation }) {
             style={styles.editButton}
             onPress={() => navigation.push("Edit Profile", currentProfile)}
           >
-            <Text style={{ alignSelf: "center" }}>Edit</Text>
+            <Text style={styles.editButtonText}>Edit</Text>
           </TouchableOpacity>
         ) : null}
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: 10,
-    flex: 1,
-  },
-  heading: {
-    fontSize: 24,
-  },
-  subheading: {},
-  editButton: {
-    borderStyle: "dotted",
+editButton: {
     borderWidth: 1,
-    borderColor: "gray",
     position: "absolute",
     right: 0,
-    alignSelf: "center",
     textAlign: "center",
-    width: "20%",
-    backgroundColor: "transparent",
-    padding: 10,
+    height: 30,
+    backgroundColor: "#F2A385",
     borderRadius: 5,
+    paddingHorizontal: 5,
+    paddingVertical: 5,
+    margin: 10,
+    backgroundColor: "#F1E088",
+    borderColor: "#FFFFFF",
+    borderWidth: 2,
+    borderRadius: 10,
+  },
+  editButtonText: {
+    fontSize: 12,
+    fontFamily: "DMSans_400Regular",
+    fontWeight: "400",
   },
   card: {
     flexDirection: "row",
@@ -83,5 +86,23 @@ const styles = StyleSheet.create({
   cardContent: {
     marginHorizontal: 10,
     marginVertical: 10,
+  },
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#5B83D7",
+  },
+  scrollView: {
+    marginHorizontal: 10,
+    marginVertical: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 10, //
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#5B83D7",
   },
 });

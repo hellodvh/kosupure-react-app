@@ -42,7 +42,10 @@ export default function UserEdit({ route, navigation }) {
         value={role}
       ></TextInput>
 
-      <TouchableOpacity style={styles.saveButton} onPress={saveProfile}>
+      {/* <TouchableOpacity style={styles.saveButton} onPress={saveProfile} >
+        <Text style={{ alignSelf: "center" }}>Save</Text>
+      </TouchableOpacity> */}
+      <TouchableOpacity style={styles.saveButton} onPress={(saveProfile) => navigation.goBack()}>
         <Text style={{ alignSelf: "center" }}>Save</Text>
       </TouchableOpacity>
       </View>
