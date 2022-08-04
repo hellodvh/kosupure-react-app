@@ -165,7 +165,9 @@ Run the following in the command-line to install all the required dependencies:
    ``` yarn install ```
 
 4. Create a new Firebase Application in the Firebase Console and edit the `firebase.config.js` file:
- ```js const firebaseConfig = {
+   
+ ```js 
+ const firebaseConfig = {
     apiKey: "your-api-key",
     authDomain: "your-auth-domain",
     projectId: "your-project-id",
@@ -175,7 +177,7 @@ Run the following in the command-line to install all the required dependencies:
     };
 ```
 
-5.  Build and Run:
+1.  Build and Run:
    ``` expo start ```
 
 
