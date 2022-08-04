@@ -28,7 +28,7 @@
 <p align="center">
 
   <a href="https://github.com/hellodvh/kosupure-react-app">
-    <img src="/Screenshots/logo.png" alt="Logo" width="125">
+    <img src="Screenshots/logo.png" alt="Logo" width="125">
   </a>
   
   <h3 align="center">Kosupure</h3>
@@ -88,7 +88,6 @@
 ## About the Project
 Brief Overview: Design and Develope a React Native and JavaScript Mobile Application for an Competition using Google Firebase and Expo.
 <!-- header image of project -->
-![image1][image1]
 
 ## Project Description
 
