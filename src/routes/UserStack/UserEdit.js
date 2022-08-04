@@ -5,6 +5,8 @@ import {
   Text,
   TextInput,
   Image,
+  View,
+  ScrollView,
   TouchableOpacity,
 } from "react-native";
 import { updateProfile } from "../../services/Database";
@@ -22,6 +24,8 @@ export default function UserEdit({ route, navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
+      <View style={styles.formContainer}>
       <Image
         source={require("../../assets/images/user.png")}
         style={styles.cardImage}
@@ -41,6 +45,8 @@ export default function UserEdit({ route, navigation }) {
       <TouchableOpacity style={styles.saveButton} onPress={saveProfile}>
         <Text style={{ alignSelf: "center" }}>Save</Text>
       </TouchableOpacity>
+      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -53,9 +59,17 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     backgroundColor: "#5B83D7",
+
   },
   scrollView: {
-    marginHorizontal: 20,
+    marginHorizontal: 10,
+    marginVertical: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 10, //
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#5B83D7",
   },
   headingText: {
     fontSize: 26,
@@ -63,8 +77,7 @@ const styles = StyleSheet.create({
     color: "rgba(0, 0, 0, 0.38)",
   },
   formContainer: {
-    width: "100%",
-    marginTop: 100,
+    marginVertical: 20,
   },
   formInputHeading: {
     fontSize: 20,
@@ -73,7 +86,6 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     color: "rgba(0, 0, 0, 0.38)",
   },
-
   formInput: {
     width: "100%",
     height: 60,
@@ -92,10 +104,12 @@ const styles = StyleSheet.create({
     borderColor: "#FFFFFF",
     borderWidth: 2,
     borderRadius: 10,
+    elevation: 3,
+    marginBottom: 35,
+    alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 35,
-    elevation: 3
+    bottom: 5,
   },
   saveButtonText: {
     fontSize: 20,
@@ -109,5 +123,8 @@ const styles = StyleSheet.create({
     left: 0,
     marginVertical: 10,
     marginHorizontal: 10,
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
