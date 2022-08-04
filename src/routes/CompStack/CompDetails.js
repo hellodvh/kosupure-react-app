@@ -57,11 +57,22 @@ export default function CompDetails({ route, navigation }) {
             <List.Accordion
               title="Description"
               id="1"
-              titleStyle={{ fontWeight: "bold", fontSize: 26, color: "gray" }}
+              style={{ backgroundColor: "transparent" }}
+              titleStyle={{
+                fontSize: 16,
+                fontFamily: "Rubik_500Medium",
+                fontWeight: "500",
+                backgroundColor: "transparent",
+              }}
             >
               <List.Item
                 description={params.description}
-                descriptionStyle={{ fontSize: 22, color: "gray" }}
+                descriptionStyle={{
+                  fontSize: 16,
+                  fontFamily: "Rubik_500Medium",
+                  fontWeight: "500",
+                  color: "#FFFFFF",
+                }}
                 descriptionNumberOfLines={10}
               />
             </List.Accordion>
@@ -70,24 +81,31 @@ export default function CompDetails({ route, navigation }) {
         {/* New Competition Form End */}
         {/* Buttons Container */}
         <View>
-          <TouchableOpacity style={styles.enterButton} onPress={() => navigation.navigate("CompEntry", params.id)}>
+          <TouchableOpacity
+            style={styles.enterButton}
+            onPress={() => navigation.navigate("CompEntry", params.id)}
+          >
             <Text style={styles.enterButtonText}>Enter Comp!</Text>
           </TouchableOpacity>
         </View>
         {/* Buttons Container End */}
         {/* Competition Entries Container*/}
         <Text style={styles.headingText}>Competition Entries</Text>
+        
         <View
           style={{
             flex: 1,
             width: "100%",
             flexDirection: "row",
             flexWrap: "wrap",
+            left: 0,
+            right: 0,
             alignItems: "center",
             justifyContent: "flex-start",
             borderWidth: 1,
             borderColor: "lightgrey",
             borderRadius: 6,
+            marginVertical: 5,
           }}
         >
           {entries.map((item, index) => (
@@ -98,7 +116,9 @@ export default function CompDetails({ route, navigation }) {
                 marginHorizontal: 10,
                 marginVertical: 10,
                 height: 165,
+                width: "100%",
                 borderRadius: 60,
+                alignItems: "center",
               }}
             >
               {/* <TouchableOpacity> */}
@@ -106,7 +126,7 @@ export default function CompDetails({ route, navigation }) {
                 borderRadius={6}
                 source={{ uri: item.entryImage }}
                 resizeMode={"cover"}
-                style={{ height: "100%", width: "100%" }}
+                style={{ height: "100%", maxWidth: "98%", width: "100%", borderRadius: 6,  paddingRight: 20 }}
               >
                 <Text style={styles.title}>{item.title}</Text>
                 {/* <Text>{item.category}</Text> */}
@@ -131,6 +151,7 @@ export default function CompDetails({ route, navigation }) {
             </View>
           ))}
         </View>
+        
         {/* Competiton Entires Container End */}
       </ScrollView>
     </View>
@@ -139,42 +160,74 @@ export default function CompDetails({ route, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#F0F2F5",
-    flex: 1,
     flexDirection: "column",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#5B83D7",
   },
   scrollView: {
-    marginHorizontal: 20,
+    marginHorizontal: 10,
+    marginVertical: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 10, //
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#5B83D7",
   },
   headerHeading: {
+    color: "#FFFFFF",
     fontSize: 26,
-    fontWeight: "bold",
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+    marginTop: 20,
   },
   headerSubheading: {
-    fontSize: 22,
+    color: "#66D8F2",
+    fontSize: 20,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
+
   },
+
   headingText: {
     fontSize: 26,
     fontWeight: "bold",
     color: "rgba(0, 0, 0, 0.38)",
-  },
-  bannerContainer: {
-    borderColor: "lightgrey",
-    borderWidth: 1,
-    borderRadius: 6,
-    height: 200,
-  },
-  bannerImage: {
     alignSelf: "center",
-    justifyContent: "center",
-    width: "100%",
-    maxHeight: 200,
-    borderRadius: 6,
   },
+
+  // bannerContainer: {
+  //   borderColor: "lightgrey",
+  //   borderWidth: 1,
+  //   borderRadius: 6,
+  //   height: 200,
+  // },
+  // bannerImage: {
+  //   alignSelf: "center",
+  //   justifyContent: "center",
+  //   width: "100%",
+  //   maxHeight: 200,
+  //   borderRadius: 6,
+  // },
   accordionContainer: {
     width: "100%",
-    marginTop: 100,
+    marginTop: 20,
   },
+  // accordionTitle: {
+  //   fontSize: 16,
+  //   fontFamily: "Rubik_500Medium",
+  //   fontWeight: "500",
+  //   borderRadius: 6,
+  // },
+  // accordionDescription: {
+  //   fontSize: 16,
+  //   fontFamily: "Rubik_500Medium",
+  //   fontWeight: "500",
+  //   color: "White",
+  // },
+
   formInputHeading: {
     fontSize: 20,
     fontWeight: "bold",
@@ -183,28 +236,19 @@ const styles = StyleSheet.create({
     color: "rgba(0, 0, 0, 0.38)",
   },
   enterButton: {
-    // backgroundColor: "#006ee6",
-    // justifyContent: "center",
-    // alignSelf: "center",
-    // width: "80%",
-    // height: 60,
-    // borderColor: "lightgrey",
-    // borderWidth: 2,
-    // borderRadius: 12,
-    // alignItems: "center",
-    // justifyContent: "center",
-    // marginTop: 35,
-    // marginBottom: 100,
     backgroundColor: "#F1E088",
     width: 260,
     height: 50,
     borderColor: "#FFFFFF",
     borderWidth: 2,
     borderRadius: 10,
+    elevation: 3,
+    marginBottom: 35,
+    marginTop: 35,
+    alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 35,
-    elevation: 3,
+    bottom: 5,
   },
   enterButtonText: {
     fontSize: 20,
@@ -214,10 +258,12 @@ const styles = StyleSheet.create({
 
   //Entries
   title: {
-    color: "#6CE0FB",
-    fontSize: 20,
+    color: "#FFFFFF",
     padding: 10,
-    fontWeight: "bold",
+    bottom:0,
+    fontSize: 20,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
   },
   votesText: {
     color: "#FFED92",

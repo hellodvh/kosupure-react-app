@@ -113,12 +113,21 @@ export default function CompEntry({ route, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#F0F2F5",
-    flex: 1,
     flexDirection: "column",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#5B83D7",
   },
   scrollView: {
-    marginHorizontal: 20,
+    marginHorizontal: 10,
+    marginVertical: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 10, //
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#5B83D7",
   },
   headingText: {
     fontSize: 26,
@@ -126,8 +135,7 @@ const styles = StyleSheet.create({
     color: "rgba(0, 0, 0, 0.38)",
   },
   formContainer: {
-    width: "100%",
-    marginTop: 100,
+    marginVertical: 20,
   },
   formInputHeading: {
     fontSize: 20,
@@ -184,22 +192,22 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   saveButton: {
-    backgroundColor: "#006ee6",
-    justifyContent: "center",
-    alignSelf: "center",
-    width: "80%",
-    height: 60,
-    borderColor: "lightgrey",
+    backgroundColor: "#F1E088",
+    width: 260,
+    height: 50,
+    borderColor: "#FFFFFF",
     borderWidth: 2,
-    borderRadius: 12,
+    borderRadius: 10,
+    elevation: 3,
+    marginBottom: 35,
+    alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 35,
-    marginBottom: 100,
+    bottom: 5,
   },
   saveButtonText: {
-    fontSize: 16,
-    color: "#fff",
-    fontWeight: "bold",
+    fontSize: 20,
+    fontFamily: "Rubik_500Medium",
+    fontWeight: "500",
   },
 });
