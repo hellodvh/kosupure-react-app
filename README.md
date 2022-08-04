@@ -3,10 +3,13 @@
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/hellodvh/kosupure-react-app?color=69f0ae&style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/hellodvh/kosupure-react-app?color=69f0ae&logoColor=ffa01c&style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/hellodvh/kosupure-react-app?color=69f0ae&style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/hellodvh/kosupure-react-app?color=69f0ae&label=LICENSE&style=for-the-badge)
+<!-- #FFED92, #5B83D7 -->
+
+![GitHub repo size](https://img.shields.io/github/repo-size/hellodvh/kosupure-react-app?color=FFED92&logoColor=FFED92&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/hellodvh/kosupure-react-app?color=%235B83D7&style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/hellodvh/kosupure-react-app?color=FFED92&logoColor=FFED92&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/hellodvh/kosupure-react-app?color=%235B83D7&label=LICENSE&style=for-the-badge)
+![GitHub Fork](https://img.shields.io/github/forks/hellodvh/kosupure-react-app?color=%23FFED92&style=for-the-badge)
 <br/>
 <!-- Refer to https://shields.io/ for more information and options about the shield links at the top of the ReadMe file -->
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -190,17 +193,18 @@ Run the following in the command-line to install all the required dependencies:
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
 ## Features and Functionality
 
-![image1][image1]
 ### Feature 1
+![image1][image1]
 
-![image2][image2]
 ### Feature 2
+![image2][image2]
 
-![image3][image3]
 ### Feature 3
+![image3][image3]
 
-![image4][image4]
 ### Feature 4
+![image4][image4]
+
 
 <!-- ![image5][image5] -->
 
